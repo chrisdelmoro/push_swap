@@ -50,6 +50,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
-# Exclusions relevant to this project
-/bin
