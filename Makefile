@@ -14,7 +14,8 @@ HEADER_BONUS		= push_swap_bonus.h
 HEADER_PATH			= $(addprefix $(HEADER_DIR_BONUS), $(HEADER_BONUS))
 
 SRC_DIR			= ./src/
-SRC				= push_swap.c
+SRC				= 	push_swap.c \
+					stack_utils.c
 SRC_PATH		= $(addprefix $(SRC_DIR), $(SRC))
 
 SRC_DIR_BONUS	= ./bonus/src/
