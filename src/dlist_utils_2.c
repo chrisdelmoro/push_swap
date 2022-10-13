@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*   dlist_utils_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 15:23:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/13 17:49:42 by ccamargo         ###   ########.fr       */
+/*   Created: 2022/10/13 17:53:32 by ccamargo          #+#    #+#             */
+/*   Updated: 2022/10/13 17:54:22 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-void	swap(t_dlist **lst, t_stack *stack)
+void	ft_dlstclear(t_dlist **lst)
 {
 	t_dlist	*tmp;
+	t_dlist	*nxt;
 
-	if (stack->len <= 1)
+	if (!lst)
 		return ;
 	tmp = *lst;
-	*lst = (*lst)->next;
-	(*lst)->prev = NULL;
-	tmp->next = (*lst)->next;
-	(*lst)->next = tmp;
-	tmp->prev = *lst;
-	stack->head = *lst;
-	if (stack->len == 2)
-		stack->tail = tmp;
+	while (tmp)
+	{
+		nxt = tmp->next;
+		ft_dlstdelone(tmp);
+		tmp = nxt;
+	}
+	*lst = NULL;
 }

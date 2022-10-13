@@ -15,6 +15,8 @@ HEADER_PATH			= $(addprefix $(HEADER_DIR_BONUS), $(HEADER_BONUS))
 
 SRC_DIR			= ./src/
 SRC				= 	push_swap.c \
+					dlist_utils.c \
+					dlist_utils_2.c \
 					stack_utils.c
 SRC_PATH		= $(addprefix $(SRC_DIR), $(SRC))
 
