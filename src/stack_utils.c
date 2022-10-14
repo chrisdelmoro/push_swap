@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:23:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/13 19:02:34 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/10/14 20:44:30 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,21 @@ void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
 	ft_dlstdelone(tmp);
 	stack2->len--;
 }
+
+void	rotate(t_dlist **lst, t_stack *stack)
+{
+	t_dlist *tmp;
+
+	if (!*lst || stack->len <= 1)
+		return ;
+
+	tmp = stack->head;
+	*lst = (*lst)->next;
+	(*lst)->prev = NULL;
+	tmp->prev = stack->tail;
+	tmp->next = NULL;
+	stack->tail->next = tmp;
+	stack->head = *lst;
+	stack->tail = tmp;
+}
+

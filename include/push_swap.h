@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/13 18:26:20 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/10/14 20:42:32 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void	ft_dlstdelone(t_dlist *lst);
 /* stack_utils.c */
 void	swap(t_dlist **lst, t_stack *stack);
 void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2);
+void	rotate(t_dlist **lst, t_stack *stack);
 
 #endif
