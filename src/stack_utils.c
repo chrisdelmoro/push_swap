@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:23:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/14 20:44:30 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/10/17 19:04:17 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,10 @@ void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
 
 void	rotate(t_dlist **lst, t_stack *stack)
 {
-	t_dlist *tmp;
+	t_dlist	*tmp;
 
 	if (!*lst || stack->len <= 1)
 		return ;
-
 	tmp = stack->head;
 	*lst = (*lst)->next;
 	(*lst)->prev = NULL;
@@ -62,3 +61,18 @@ void	rotate(t_dlist **lst, t_stack *stack)
 	stack->tail = tmp;
 }
 
+void	rev_rotate(t_dlist **lst, t_stack *stack)
+{
+	t_dlist	*tmp;
+
+	if (!*lst || stack->len <= 1)
+		return ;
+	tmp = stack->tail->prev;
+	*lst = stack->tail;
+	(*lst)->next = stack->head;
+	(*lst)->prev = NULL;
+	stack->head->prev = stack->tail;
+	tmp->next = NULL;
+	stack->tail = tmp;
+	stack->head = *lst;
+}

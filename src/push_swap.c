@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:26:57 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/14 20:45:01 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/10/14 20:53:11 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main(int argc, char **argv)
 	ft_printf("A_stack.tail = %d\n\n", a_stack.tail->nbr);
 	ft_printf("A_stack.len = %d\n\n", a_stack.len);
 
-	rotate(&a, &a_stack);
+	rev_rotate(&a, &a_stack);
 
 	tmp = a;
 	while (tmp->next)
