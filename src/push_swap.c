@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:26:57 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/14 20:53:11 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/10/19 19:58:35 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ int	main(int argc, char **argv)
 	t_stack a_stack;
 	//t_stack b_stack;
 
-	if (argc < 2)
+	if (!is_param_valid(argv))
 	{
-		ft_printf("At least two parameters are necessary!\n");
+		ft_printf("Error!\n");
 		exit(EXIT_FAILURE);
 	}
 	initialize_stack_a(&a, &a_stack, argc, argv);
@@ -70,17 +70,5 @@ int	main(int argc, char **argv)
 	ft_printf("A_stack.head = %d\n", a_stack.head->nbr);
 	ft_printf("A_stack.tail = %d\n\n", a_stack.tail->nbr);
 	ft_printf("A_stack.len = %d\n\n", a_stack.len);
-
-	/* tmp = b;
-	while (tmp->next)
-	{
-		ft_printf("%d\n", tmp->nbr);
-		tmp = tmp->next;
-	}
-	ft_printf("%d\n", tmp->nbr);
-	ft_printf("\nStack struct status:\n");
-	ft_printf("B_stack.head = %d\n", b_stack.head->nbr);
-	ft_printf("B_stack.tail = %d\n\n", b_stack.tail->nbr);
-	ft_printf("B_stack.len = %d\n\n", b_stack.len); */
 	return (EXIT_SUCCESS);
 }

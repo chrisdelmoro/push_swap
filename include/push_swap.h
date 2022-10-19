@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/14 20:46:45 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/10/19 19:59:13 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ typedef struct s_stack
 	t_dlist	*head;
 	t_dlist	*tail;
 }	t_stack;
+
+/* param_validation.c */
+int	is_param_valid(char **argv);
 
 /* dlist_utils.c */
 t_dlist	*ft_dlstnew(int nbr);
