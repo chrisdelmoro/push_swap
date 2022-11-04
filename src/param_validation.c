@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 19:58:03 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/19 19:58:51 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/02 18:40:27 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,7 @@ static int are_params_unique(char **argv)
 		while (argv[j])
 		{
 			if (tested_arg == ft_atoi(argv[j]))
-			{
-				ft_printf("Not all params are unique!\n"); //set standard error!
 				return (0);
-			}
 			j++;
 		}
 		i++;
@@ -49,10 +46,7 @@ static int are_params_numbers(char **argv)
 		while (argv[i][j])
 		{
 			if (!ft_isdigit(argv[i][j]))
-			{
-				ft_printf("Not all params are numbers!\n"); //set standard error!
 				return (0);
-			}
 			j++;
 		}
 		i++;

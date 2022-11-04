@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/19 19:59:13 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/03 20:49:41 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,14 @@ void	ft_dlstclear(t_dlist **lst);
 void	ft_dlstdelone(t_dlist *lst);
 
 /* stack_utils.c */
+void	sa(t_dlist **lst, t_stack *stack);
+void	sb(t_dlist **lst, t_stack *stack);
+void	pa(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2);
+void	pb(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2);
+void	ra(t_dlist **lst, t_stack *stack);
+void	rb(t_dlist **lst, t_stack *stack);
+void	rra(t_dlist **lst, t_stack *stack);
+void	rrb(t_dlist **lst, t_stack *stack);
 void	swap(t_dlist **lst, t_stack *stack);
 void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2);
 void	rotate(t_dlist **lst, t_stack *stack);
