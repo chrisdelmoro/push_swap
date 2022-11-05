@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/03 20:49:41 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/05 13:22:07 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 typedef struct s_dlist
 {
 	int				nbr;
+	int				index;
 	struct s_dlist	*next;
 	struct s_dlist	*prev;
 }	t_dlist;
