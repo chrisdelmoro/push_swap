@@ -18,7 +18,10 @@ SRC				= 	push_swap.c \
 					param_validation.c \
 					dlist_utils.c \
 					dlist_utils_2.c \
-					stack_utils.c
+					stack_utils_swap.c \
+					stack_utils_push.c \
+					stack_utils_rotate.c \
+					stack_utils_rev_rotate.c
 SRC_PATH		= $(addprefix $(SRC_DIR), $(SRC))
 
 SRC_DIR_BONUS	= ./bonus/src/
