@@ -6,13 +6,13 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 19:58:03 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/02 18:40:27 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/06 18:38:14 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-static int are_params_unique(char **argv)
+static int	are_params_unique(char **argv)
 {
 	size_t	i;
 	size_t	j;
@@ -34,7 +34,7 @@ static int are_params_unique(char **argv)
 	return (1);
 }
 
-static int are_params_numbers(char **argv)
+static int	are_params_numbers(char **argv)
 {
 	size_t	i;
 	size_t	j;

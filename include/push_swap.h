@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/06 18:24:53 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/06 18:42:10 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_stack
 }	t_stack;
 
 /* param_validation.c */
-int	is_param_valid(char **argv);
+int		is_param_valid(char **argv);
 
 /* dlist_utils.c */
 t_dlist	*ft_dlstnew(int nbr);
@@ -63,5 +63,8 @@ void	rotate(t_dlist **lst, t_stack *stack);
 void	rra(t_dlist **lst, t_stack *stack);
 void	rrb(t_dlist **lst, t_stack *stack);
 void	rev_rotate(t_dlist **lst, t_stack *stack);
+
+/* stack_initialization.c */
+void	initialize_stack(t_dlist **a, t_stack *a_stack, int argc, char **argv);
 
 #endif
