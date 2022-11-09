@@ -53,6 +53,7 @@ SRC =	ft_isalpha.c \
 		ft_lstmap.c \
 		ft_freethis.c \
 		ft_putnbr_base_fd.c \
+		ft_atoll.c \
 		ft_printf.c \
 		ft_put_c.c \
 		ft_put_u.c \

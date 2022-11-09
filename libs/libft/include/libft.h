@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccamargo <ccamargo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:43:58 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/05/30 16:38:34 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/09 19:00:31 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_list
  * 
  * @return (int) Returns 1 if c is alphanumeric or 0 if c is not alphanumeric.
  */
-int		ft_isalnum(int c);
+int			ft_isalnum(int c);
 
 /**
  * @brief The ft_isalpha() function checks if the char c is alphabetic.
@@ -42,7 +42,7 @@ int		ft_isalnum(int c);
  * 
  * @return (int) Returns 1 if c is alphabetic or 0 if c is not alphabetic.
  */
-int		ft_isalpha(int c);
+int			ft_isalpha(int c);
 
 /**
  * @brief The ft_isascii() function checks if the char c is an ASCII character.
@@ -52,7 +52,7 @@ int		ft_isalpha(int c);
  * @return (int) Returns 1 if c is an ASCII character or 0 if c is not an ASCII
  * character.
  */
-int		ft_isascii(int c);
+int			ft_isascii(int c);
 
 /**
  * @brief The ft_isdigit() function checks if the char c is a number.
@@ -61,7 +61,7 @@ int		ft_isascii(int c);
  * 
  * @return (int) Returns 1 if c is a number or 0 if c is not a number.
  */
-int		ft_isdigit(int c);
+int			ft_isdigit(int c);
 
 /**
  * @brief The ft_isprint() checks if the char c is printable.
@@ -70,7 +70,7 @@ int		ft_isdigit(int c);
  * 
  * @return (int) Returns 1 if c is printable or 0 if c is not printable.
  */
-int		ft_isprint(int c);
+int			ft_isprint(int c);
 
 /**
  * @brief The ft_toupper() transforms char c to uppercase if it is a lowercase
@@ -81,7 +81,7 @@ int		ft_isprint(int c);
  * @return (int) Returns the character c transformed to uppercase or it's
  * original form case c is not a lowercase letter.
  */
-int		ft_toupper(int c);
+int			ft_toupper(int c);
 
 /**
  * @brief The ft_tolower() transforms char c to lowercase if it is a uppercase
@@ -92,7 +92,7 @@ int		ft_toupper(int c);
  * @return (int) Returns the character c transformed to lowercase or it's
  * original form case c is not a uppercase letter.
  */
-int		ft_tolower(int c);
+int			ft_tolower(int c);
 
 /* <string.h> functions: */
 /* Memory: */
@@ -108,7 +108,7 @@ int		ft_tolower(int c);
  * if the first n bytes of s1 is found, respectively, to be less than, to
  * match, or be greater than the first n bytes of s2.
  */
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /**
  * @brief The ft_memchr() function scans the initial n bytes of the memory
@@ -121,7 +121,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
  * @return (void *) Return a pointer str to the matching byte or NULL if it
  * does not occur.
  */
-void	*ft_memchr(const void *s, int c, size_t n);
+void		*ft_memchr(const void *s, int c, size_t n);
 
 /**
  * @brief The ft_memset() function fills the first n bytes of the memory area
@@ -133,7 +133,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
  * 
  * @return (void *) Returns a pointer to the memory area s.
  */
-void	*ft_memset(void *s, int c, size_t n);
+void		*ft_memset(void *s, int c, size_t n);
 
 /**
  * @brief The ft_memcpy() function copies n bytes from memory area src to
@@ -145,7 +145,7 @@ void	*ft_memset(void *s, int c, size_t n);
  * 
  * @return (void *) Returns a pointer to the memory area dest.
  */
-void	*ft_memcpy(void *dest, const void *src, size_t n);
+void		*ft_memcpy(void *dest, const void *src, size_t n);
 
 /**
  * @brief The ft_memmove() function copies n bytes from memory area src to
@@ -157,7 +157,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
  * 
  * @return (void *) Returns a pointer to the memory area dest.
  */
-void	*ft_memmove(void *dest, const void *src, size_t n);
+void		*ft_memmove(void *dest, const void *src, size_t n);
 
 /* Strings: */
 /**
@@ -168,7 +168,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
  * 
  * @return (size_t) Returns the number of bytes in the string pointed to by s.
  */
-size_t	ft_strlen(const char *s);
+size_t		ft_strlen(const char *s);
 
 /**
  * @brief The ft_strdup() function returns a pointer to a new string which is a
@@ -180,7 +180,7 @@ size_t	ft_strlen(const char *s);
  * returns NULL if insufficient memory was available, with errno set to
  * indicate the cause of the error.
  */
-char	*ft_strdup(const char *s);
+char		*ft_strdup(const char *s);
 
 /**
  * @brief The ft_strchr() functions returns a pointer to the first occurrence
@@ -192,7 +192,7 @@ char	*ft_strdup(const char *s);
  * @return (char *) Return a pointer to the matched character or NULL if the
  * character is not found.
  */
-char	*ft_strchr(const char *s, int c);
+char		*ft_strchr(const char *s, int c);
 
 /**
  * @brief The ft_strrchr() function finds the end of the string `s`, then
@@ -205,7 +205,7 @@ char	*ft_strchr(const char *s, int c);
  * @return char* Return a pointer to the matched character or NULL if the
  * character is not found.
  */
-char	*ft_strrchr(const char *s, int c);
+char		*ft_strrchr(const char *s, int c);
 
 /**
  * @brief The ft_strncmp() function compares the two strings s1 and s2. The
@@ -219,7 +219,7 @@ char	*ft_strrchr(const char *s, int c);
  * s1 (or the first n bytes thereof) is found, respectively, to be less than,
  * to match, or be greater than s2.
  */
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /* BSD (<bsd/string.h>): */
 /**
@@ -232,7 +232,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
  * 
  * @return (size_t) Returns the length of src.
  */
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 
 /**
  * @brief The ft_strlcat() function appends the NUL-terminated string src to
@@ -246,7 +246,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
  * @return (size_t) Return the total length of the string, that is the initial
  * length of dst plus the length of src.
  */
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
 
 /**
  * @brief The ft_strnstr() function locates the first occurrence of the
@@ -262,7 +262,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
  * occurs nowhere in big, NULL is returned. Otherwise a pointer to the first
  * character of the first occurrence of little is returned.
  */
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+char		*ft_strnstr(const char *big, const char *little, size_t len);
 
 /* <stdlib.h> functions: */
 /**
@@ -274,7 +274,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  *
  * @return (int) The converted value or 0 on error.
  */
-int		ft_atoi(const char *nptr);
+int			ft_atoi(const char *nptr);
 
 /**
  * @brief The calloc() function allocates memory for an array of nmemb
@@ -291,10 +291,10 @@ int		ft_atoi(const char *nptr);
  * NULL may also be returned by a successful call to calloc() with nmemb or
  * size equal to zero.
  */
-void	*ft_calloc(size_t nmemb, size_t size);
+void		*ft_calloc(size_t nmemb, size_t size);
 
 /* <strings.h> functions: */
-void	ft_bzero(void *s, size_t n);	// Deprecated; use memset instead
+void		ft_bzero(void *s, size_t n);	// Deprecated; use memset instead
 
 /* New functions: */
 /**
@@ -308,7 +308,7 @@ void	ft_bzero(void *s, size_t n);	// Deprecated; use memset instead
  * 
  * @return (char *) Returns the substring. NULL if the allocation fails.
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 /**
  * @brief The ft_strjoin() function allocates (with malloc(3)) and returns a
@@ -319,7 +319,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  * 
  * @return (char *) Returns the new string or NULL if the allocation fails.
  */
-char	*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strjoin(char const *s1, char const *s2);
 
 /**
  * @brief The ft_strtrim() function allocates (with malloc(3)) and returns a
@@ -331,7 +331,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
  * 
  * @return (char *) Returns the trimmed string, or NULL if allocation fails.
  */
-char	*ft_strtrim(char const *s1, char const *set);
+char		*ft_strtrim(char const *s1, char const *set);
 
 /**
  * @brief The ft_split() function allocates (with ft_calloc) and returns an
@@ -344,7 +344,7 @@ char	*ft_strtrim(char const *s1, char const *set);
  * @return (char **) Returns a matrix of two splitted arrays, else returns NULL
  * if allocation fails.
  */
-char	**ft_split(char const *s, char c);
+char		**ft_split(char const *s, char c);
 
 /**
  * @brief The ft_itoa() function allocates (with malloc(3)) and returns a
@@ -356,7 +356,7 @@ char	**ft_split(char const *s, char c);
  * @return (char *) Returns the string representing the integer. NULL if the
  * allocation fails.
  */
-char	*ft_itoa(int n);
+char		*ft_itoa(int n);
 
 /**
  * @brief The ft_strmapi() function applies the function ’f’ to each character
@@ -369,7 +369,7 @@ char	*ft_itoa(int n);
  * @return (char *) The string created from the successive applications of ’f’.
  * Returns NULL if the allocation fails.
  */
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
  * @brief The ft_striteri() function applies the function ’f’ on each character
@@ -379,7 +379,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
  * @param s The string on which to iterate.
  * @param f The function to apply to each character.
  */
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /**
  * @brief The ft_putchar_fd() function outputs the character ’c’ to the given
@@ -388,7 +388,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
  * @param c The character to output.
  * @param fd The file descriptor on which to write.
  */
-void	ft_putchar_fd(char c, int fd);
+void		ft_putchar_fd(char c, int fd);
 
 /**
  * @brief The ft_putstr_fd outputs the string ’s’ to the given filedescriptor.
@@ -396,7 +396,7 @@ void	ft_putchar_fd(char c, int fd);
  * @param s The string to output.
  * @param fd The file descriptor on which to write.
  */
-void	ft_putstr_fd(char *s, int fd);
+void		ft_putstr_fd(char *s, int fd);
 
 /**
  * @brief The ft_putendl_fd() function outputs the string ’s’ to the given
@@ -405,7 +405,7 @@ void	ft_putstr_fd(char *s, int fd);
  * @param s The string to output.
  * @param fd The file descriptor on which to write.
  */
-void	ft_putendl_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
 
 /**
  * @brief The ft_putnbr_fd() function outputs the integer ’n’ to the given
@@ -414,7 +414,7 @@ void	ft_putendl_fd(char *s, int fd);
  * @param n The integer to output.
  * @param fd The file descriptor on which to write.
  */
-void	ft_putnbr_fd(int n, int fd);
+void		ft_putnbr_fd(int n, int fd);
 
 /*
 * Bonus functions:
@@ -428,7 +428,7 @@ void	ft_putnbr_fd(int n, int fd);
  * 
  * @return (t_list *) The new element.
  */
-t_list	*ft_lstnew(void *content);
+t_list		*ft_lstnew(void *content);
 
 /**
  * @brief The ft_lstadd_front() function adds the element ’new’ at the
@@ -437,7 +437,7 @@ t_list	*ft_lstnew(void *content);
  * @param lst The address of a pointer to the first link of a list.
  * @param new The address of a pointer to the element to be added to the list.
  */
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void		ft_lstadd_front(t_list **lst, t_list *new);
 
 /**
  * @brief The ft_lstsize() function counts the number of elements in a list.
@@ -446,7 +446,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
  * 
  * @return (int) Returns the length of a list.
  */
-int		ft_lstsize(t_list *lst);
+int			ft_lstsize(t_list *lst);
 
 /**
  * @brief The ft_lstlast() returns the last element of the list.
@@ -456,7 +456,7 @@ int		ft_lstsize(t_list *lst);
  * @return (t_list *) Returns the last element of the list. Returns NULL if
  * `lst` is empty or is already in the last element.
  */
-t_list	*ft_lstlast(t_list *lst);
+t_list		*ft_lstlast(t_list *lst);
 
 /**
  * @brief The ft_lstadd_back() function adds the `new` element at the end of
@@ -465,7 +465,7 @@ t_list	*ft_lstlast(t_list *lst);
  * @param lst The address of a pointer to the first link of a list.
  * @param new The address of a pointer to the element to be added to the list.
  */
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void		ft_lstadd_back(t_list **lst, t_list *new);
 
 /**
  * @brief The ft_lstdelone() function takes as a parameter an element and frees
@@ -475,7 +475,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
  * @param lst The element to free.
  * @param del The address of the function used to delete the content.
  */
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void		ft_lstdelone(t_list *lst, void (*del)(void *));
 
 /**
  * @brief The ft_lstclear() function deletes and frees the given element and
@@ -486,7 +486,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
  * @param del The adress of the function used to delete the content of the
  * element.
  */
-void	ft_lstclear(t_list **lst, void (*del)(void *));
+void		ft_lstclear(t_list **lst, void (*del)(void *));
 
 /**
  * @brief The ft_lstiter() function iterates the list ’lst’ and applies the
@@ -495,7 +495,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
  * @param lst The adress of a pointer to an element.
  * @param f The adress of the function used to iterate on the list.
  */
-void	ft_lstiter(t_list *lst, void (*f)(void *));
+void		ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**
  * @brief The ft_lstmap() function iterates the list ’lst’ and applies the
@@ -510,7 +510,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  * 
  * @return (t_list *) Returns the new list or NULL if the allocation fails.
  */
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /* 
 * Adcional functions:
@@ -522,7 +522,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
  * @param str The address of the pointer to be free'd.
  * @param content The target to point str to.
  */
-void	ft_freethis(char **str, void *content);
+void		ft_freethis(char **str, void *content);
 
 /**
  * @brief The ft_putnbr_base_fd() function outputs a number in any base given
@@ -532,6 +532,16 @@ void	ft_freethis(char **str, void *content);
  * @param base The numerical base to be outputed to.
  * @param fd The file descriptor on which to write.
  */
-void	ft_putnbr_base_fd(int nbr, char *base, int fd);
+void		ft_putnbr_base_fd(int nbr, char *base, int fd);
 
+/**
+ * @brief The ft_atoll() function converts the initial portion of the string
+ * pointed to by nptr to long long.
+ *
+ * @param nptr Points to the area of memory of the beginning of string to be
+ * converted.
+ *
+ * @return (long long) The converted value or 0 on error.
+ */
+long long	ft_atoll(const char *nptr);
 #endif

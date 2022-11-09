@@ -22,7 +22,8 @@ SRC				= 	push_swap.c \
 					stack_utils_push.c \
 					stack_utils_rotate.c \
 					stack_utils_rev_rotate.c \
-					stack_initialization.c
+					stack_initialization.c \
+					sort_stack.c
 SRC_PATH		= $(addprefix $(SRC_DIR), $(SRC))
 
 SRC_DIR_BONUS	= ./bonus/src/

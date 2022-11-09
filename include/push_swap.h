@@ -6,12 +6,15 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/06 18:42:10 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/09 19:06:38 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+# define MIN_INT -2147483648
+# define MAX_INT 2147483647
 
 # include <libft.h>
 # include <ft_printf.h>
@@ -35,7 +38,7 @@ typedef struct s_stack
 int		is_param_valid(char **argv);
 
 /* dlist_utils.c */
-t_dlist	*ft_dlstnew(int nbr);
+t_dlist	*ft_dlstnew(int nbr, int index);
 void	ft_dlstadd_front(t_dlist **lst, t_dlist *new);
 void	ft_dlstadd_back(t_dlist **lst, t_dlist *new);
 t_dlist	*ft_dlstlast(t_dlist *lst);
@@ -66,5 +69,11 @@ void	rev_rotate(t_dlist **lst, t_stack *stack);
 
 /* stack_initialization.c */
 void	initialize_stack(t_dlist **a, t_stack *a_stack, int argc, char **argv);
+
+/* sort_stack.c */
+void	print_stack(t_dlist *stack, char ab);
+int		is_sorted(t_dlist *lst);
+void	sort_stack(t_dlist **a, t_stack *a_stack, t_dlist **b, \
+t_stack *b_stack);
 
 #endif

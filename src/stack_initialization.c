@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 18:40:54 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/06 19:04:00 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/09 17:36:44 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,10 @@ static void	bubble_sort(int **nbr_array, t_stack *a_stack)
 		j = 0;
 		while ((int) j < a_stack->len - (int) i - 1)
 		{
-			if (nbr_array[j] > nbr_array[j + 1])
+			if ((*nbr_array)[j] > (*nbr_array)[j + 1])
+			{
 				pre_swap(nbr_array, j);
+			}
 			j++;
 		}
 		i++;
@@ -85,10 +87,10 @@ void	initialize_stack(t_dlist **a, t_stack *a_stack, int argc, char **argv)
 	int		*nbr_array;
 
 	i = 2;
-	*a = ft_dlstnew(ft_atoi(argv[1]));
+	*a = ft_dlstnew(ft_atoi(argv[1]), -1);
 	while (argv[i])
 	{
-		ft_dlstadd_back(a, ft_dlstnew(ft_atoi(argv[i])));
+		ft_dlstadd_back(a, ft_dlstnew(ft_atoi(argv[i]), -1));
 		i++;
 	}
 	a_stack->len = argc - 1;
@@ -96,4 +98,5 @@ void	initialize_stack(t_dlist **a, t_stack *a_stack, int argc, char **argv)
 	a_stack->tail = ft_dlstlast(*a);
 	nbr_array = pre_sort(a, a_stack);
 	feed_indexes(a, a_stack, nbr_array);
+	free(nbr_array);
 }

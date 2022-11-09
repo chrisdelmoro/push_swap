@@ -6,13 +6,13 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:56:23 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/10/13 17:53:17 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/09 16:26:18 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-t_dlist	*ft_dlstnew(int nbr)
+t_dlist	*ft_dlstnew(int nbr, int index)
 {
 	t_dlist	*newnode;
 
@@ -20,6 +20,7 @@ t_dlist	*ft_dlstnew(int nbr)
 	if (!newnode)
 		return (NULL);
 	newnode->nbr = nbr;
+	newnode->index = index;
 	newnode->next = NULL;
 	newnode->prev = NULL;
 	return (newnode);

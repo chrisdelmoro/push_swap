@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:26:57 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/05 13:19:41 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/09 19:08:48 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,14 +76,10 @@ void	sort_stack(t_dlist **a, t_stack *a_stack)
 		}
 		i = 0;
 	}
-	//printf_stack((*a), 'A');
-	//printf_stack(b, 'B');
 	while (b)
 	{
 		pa(a, &b, a_stack, &b_stack);
 	}
-	//printf_stack((*a), 'A');
-	//printf_stack(b, 'B');
 }
 
 void	initialize_stack(t_dlist **a, t_stack *a_stack, int argc, char **argv)
@@ -113,10 +109,7 @@ int	main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	initialize_stack(&a, &a_stack, argc, argv);
-
 	//printf_stack(a, 'A');
-
 	sort_stack(&a, &a_stack);
-
 	return (EXIT_SUCCESS);
 }
