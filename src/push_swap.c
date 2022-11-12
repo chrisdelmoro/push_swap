@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:26:57 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/09 19:07:41 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:00:58 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	t_dlist	*b;
 	t_stack	b_stack;
 
-	if (argc <= 1)
+	if (argc <= 2)
 		exit(EXIT_SUCCESS);
 	if (!is_param_valid(argv))
 	{
@@ -32,8 +32,8 @@ int	main(int argc, char **argv)
 		ft_dlstclear(&a);
 		exit(EXIT_SUCCESS);
 	}
-	//print_stack(a, 'A');
 	sort_stack(&a, &a_stack, &b, &b_stack);
+	//print_stack(a, 'A');
 	ft_dlstclear(&a);
 	return (EXIT_SUCCESS);
 }

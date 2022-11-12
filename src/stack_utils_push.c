@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:23:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/09 16:24:01 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/12 19:49:11 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,13 @@ void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
 	ft_dlstadd_front(lst1, ft_dlstnew((*lst2)->nbr, (*lst2)->index));
 	stack1->head = *lst1;
 	stack1->len++;
+	if (stack1->len == 1)
+		stack1->tail = *lst1;
 	tmp = *lst2;
 	*lst2 = (*lst2)->next;
 	stack2->head = *lst2;
 	ft_dlstdelone(tmp);
 	stack2->len--;
+	if (stack2->len == 0)
+		stack2->tail = NULL;
 }
