@@ -6,13 +6,13 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:05:27 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:07:56 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:15:23 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-void	rotate_up_and_push(t_dlist **a, t_stack *a_stack, t_dlist **b, t_stack *b_stack, int target)
+void	rotate_up_and_push(t_dlist **a, t_stack *a_stack, int target)
 {
 	int	i;
 
@@ -22,10 +22,9 @@ void	rotate_up_and_push(t_dlist **a, t_stack *a_stack, t_dlist **b, t_stack *b_s
 		ra(a, a_stack);
 		i++;
 	}
-	pb(b, a, b_stack, a_stack);
 }
 
-void	rotate_down_and_push(t_dlist **a, t_stack *a_stack, t_dlist **b, t_stack *b_stack, int target)
+void	rotate_down_and_push(t_dlist **a, t_stack *a_stack, int target)
 {
 	int	i;
 
@@ -35,7 +34,6 @@ void	rotate_down_and_push(t_dlist **a, t_stack *a_stack, t_dlist **b, t_stack *b
 		rra(a, a_stack);
 		i++;
 	}
-	pb(b, a, b_stack, a_stack);
 }
 
 int	find_biggest(t_dlist *lst, int target)

@@ -26,6 +26,7 @@ SRC				= 	push_swap.c \
 					sort_stack.c \
 					sort_small.c \
 					sort_big_hundred.c \
+					sort_big_five_hundred.c \
 					sort_big_utils.c
 SRC_PATH		= $(addprefix $(SRC_DIR), $(SRC))
 

@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:08:14 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:19:00 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,13 @@ void	sort_4_5(t_dlist **a, t_stack *a_stack, t_dlist **b, t_stack *b_stack);
 void	sort_hundred(t_dlist **a, t_stack *a_stack, t_dlist **b, \
 t_stack *b_stack);
 
+/* sort_big_five_hundred.c */
+void	sort_five_hundred(t_dlist **a, t_stack *a_stack, t_dlist **b, \
+t_stack *b_stack);
+
 /* sort_big_utils.c */
-void	rotate_up_and_push(t_dlist **a, t_stack *a_stack, t_dlist **b, t_stack *b_stack, int target);
-void	rotate_down_and_push(t_dlist **a, t_stack *a_stack, t_dlist **b, t_stack *b_stack, int target);
+void	rotate_up_and_push(t_dlist **a, t_stack *a_stack, int target);
+void	rotate_down_and_push(t_dlist **a, t_stack *a_stack, int target);
 int		find_biggest(t_dlist *lst, int target);
 
 #endif

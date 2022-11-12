@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:11:51 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:04:06 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:21:06 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ void	sort_stack(t_dlist **a, t_stack *a_stack, t_dlist **b, t_stack *b_stack)
 		sort_4_5(a, a_stack, b, b_stack);
 	if (a_stack->len > 10 && a_stack->len <= 100)
 		sort_hundred(a, a_stack, b, b_stack);
-	/* if (a_stack->len > 100)
-		sort_five_hundred(); */
+	if (a_stack->len > 100)
+		sort_five_hundred(a, a_stack, b, b_stack);
 }

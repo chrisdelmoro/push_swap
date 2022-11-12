@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_big_hundred.c                                 :+:      :+:    :+:   */
+/*   sort_big_five_hundred.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 19:20:19 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:15:56 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/12 20:28:50 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ t_stack *b_stack)
 	int	second;
 
 	chunk = 0;
-	while (chunk < 5)
+	while (chunk < 11)
 	{
 		i = 0;
-		while (i < 20)
+		while (i < 50)
 		{
 			first = hold_first(*a, chunk * 20);
 			second = hold_second(*a_stack, chunk * 20);
@@ -91,7 +91,7 @@ t_stack *b_stack)
 	}
 }
 
-void	sort_hundred(t_dlist **a, t_stack *a_stack, t_dlist **b, \
+void	sort_five_hundred(t_dlist **a, t_stack *a_stack, t_dlist **b, \
 t_stack *b_stack)
 {
 	pre_sort_to_b(a, a_stack, b, b_stack);
