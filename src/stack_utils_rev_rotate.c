@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:23:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/06 18:27:21 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/13 19:43:40 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ void	rrb(t_dlist **lst, t_stack *stack)
 	ft_printf("rrb\n");
 }
 
-/* void	rrr(t_dlist **lst, t_stack *stack)
+void	rrr(t_dlist **a, t_dlist **b, t_stack *a_stack, t_stack *b_stack)
 {
-
-} */
+	rev_rotate(a, a_stack);
+	rev_rotate(b, b_stack);
+	ft_printf("rrr\n");
+}
 
 void	rev_rotate(t_dlist **lst, t_stack *stack)
 {

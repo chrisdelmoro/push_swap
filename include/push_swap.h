@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/13 18:41:11 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/13 19:44:09 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,13 @@ void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2);
 /* stack_utils_rotate.c */
 void	ra(t_dlist **lst, t_stack *stack);
 void	rb(t_dlist **lst, t_stack *stack);
+void	rr(t_dlist **a, t_dlist **b, t_stack *a_stack, t_stack *b_stack);
 void	rotate(t_dlist **lst, t_stack *stack);
 
 /* stack_utils_rev_rotate.c */
 void	rra(t_dlist **lst, t_stack *stack);
 void	rrb(t_dlist **lst, t_stack *stack);
+void	rrr(t_dlist **a, t_dlist **b, t_stack *a_stack, t_stack *b_stack);
 void	rev_rotate(t_dlist **lst, t_stack *stack);
 
 /* stack_initialization.c */
