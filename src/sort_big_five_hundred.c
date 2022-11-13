@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 19:20:19 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:28:50 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:37:59 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	hold_first(t_dlist *a, int chunk)
 	i = 0;
 	while (a)
 	{
-		if (a->index >= chunk && a->index < (chunk + 20))
+		if (a->index >= chunk && a->index < (chunk + 40))
 			return (i);
 		i++;
 		a = a->next;
@@ -36,7 +36,7 @@ static int	hold_second(t_stack a_stack, int chunk)
 	i = 0;
 	while (tmp)
 	{
-		if (tmp->index >= chunk && tmp->index < (chunk + 20))
+		if (tmp->index >= chunk && tmp->index < (chunk + 40))
 			return (i);
 		i++;
 		tmp = tmp->prev;
@@ -73,13 +73,13 @@ t_stack *b_stack)
 	int	second;
 
 	chunk = 0;
-	while (chunk < 11)
+	while ((*a))
 	{
 		i = 0;
-		while (i < 50)
+		while (i < 40)
 		{
-			first = hold_first(*a, chunk * 20);
-			second = hold_second(*a_stack, chunk * 20);
+			first = hold_first(*a, chunk * 40);
+			second = hold_second(*a_stack, chunk * 40);
 			if (first < second)
 				rotate_up_and_push(a, a_stack, first);
 			else

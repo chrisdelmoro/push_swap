@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:26:57 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:00:58 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:37:34 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	main(int argc, char **argv)
 		exit(EXIT_SUCCESS);
 	}
 	sort_stack(&a, &a_stack, &b, &b_stack);
-	//print_stack(a, 'A');
 	ft_dlstclear(&a);
 	return (EXIT_SUCCESS);
 }

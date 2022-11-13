@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 19:20:19 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:15:56 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:26:23 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ t_stack *b_stack)
 	int	second;
 
 	chunk = 0;
-	while (chunk < 5)
+	while ((*a))
 	{
 		i = 0;
 		while (i < 20)

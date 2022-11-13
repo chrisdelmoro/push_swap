@@ -6,21 +6,11 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:11:51 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:21:06 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:41:53 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
-
-void	print_stack(t_dlist *stack, char ab)
-{
-	ft_printf("\n");
-	while (stack)
-	{
-		ft_printf("%c nbr = %d --- index = %d\n", ab, stack->nbr, stack->index);
-		stack = stack->next;
-	}
-}
 
 int	is_sorted(t_dlist *lst)
 {

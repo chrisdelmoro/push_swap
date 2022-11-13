@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:19:00 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:41:11 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ void	rev_rotate(t_dlist **lst, t_stack *stack);
 void	initialize_stack(t_dlist **a, t_stack *a_stack, int argc, char **argv);
 
 /* sort_stack.c */
-void	print_stack(t_dlist *stack, char ab);
 int		is_sorted(t_dlist *lst);
 void	sort_stack(t_dlist **a, t_stack *a_stack, t_dlist **b, \
 t_stack *b_stack);
