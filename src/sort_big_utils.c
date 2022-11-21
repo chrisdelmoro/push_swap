@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:05:27 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:15:23 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/18 01:52:59 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,17 @@ void	rotate_down_and_push(t_dlist **a, t_stack *a_stack, int target)
 	}
 }
 
-int	find_biggest(t_dlist *lst, int target)
+int	find_biggest(t_dlist *lst, int target, int len)
 {
 	int	i;
 
 	i = 0;
-	while (lst)
+	while (len)
 	{
 		if (lst->index == target)
 			return (i);
 		i++;
+		len--;
 		lst = lst->next;
 	}
 	return (-1);

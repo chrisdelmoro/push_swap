@@ -6,19 +6,39 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:11:51 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/13 18:49:07 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/18 00:53:23 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-int	is_sorted(t_dlist *lst)
+void	print_stack(t_dlist *stack, int len, char ab)
 {
-	while (lst->next)
+	ft_printf("\n");
+	while (len)
+	{
+		ft_printf("%c nbr = %d --- index = %d\n", ab, stack->nbr, stack->index);
+		ft_printf("nbr.next = %p --- nbr.prev = %p\n", stack->next, stack->prev);
+		stack = stack->next;
+		len--;
+	}
+}
+
+void	print_stack_data(t_stack stack, char ab)
+{
+	ft_printf("%c_stack.head.nbr = %d\n", ab, stack.head->nbr);
+	ft_printf("%c_stack.tail.nbr = %d\n", ab, stack.tail->nbr);
+	ft_printf("%c_stack.len = %d\n", ab, stack.len);
+}
+
+int	is_sorted(t_dlist *lst, int len)
+{
+	while (len - 1)
 	{
 		if (lst->index > lst->next->index)
 			return (0);
 		lst = lst->next;
+		len--;
 	}
 	return (1);
 }

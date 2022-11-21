@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:23:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/13 19:42:57 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:44:28 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,9 @@ void	rr(t_dlist **a, t_dlist **b, t_stack *a_stack, t_stack *b_stack)
 
 void	rotate(t_dlist **lst, t_stack *stack)
 {
-	t_dlist	*tmp;
-
 	if (!*lst || stack->len <= 1)
 		return ;
-	tmp = stack->head;
 	*lst = (*lst)->next;
-	(*lst)->prev = NULL;
-	tmp->prev = stack->tail;
-	tmp->next = NULL;
-	stack->tail->next = tmp;
 	stack->head = *lst;
-	stack->tail = tmp;
+	stack->tail = (*lst)->prev;
 }

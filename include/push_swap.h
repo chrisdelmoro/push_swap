@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:27:55 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/13 19:44:09 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/20 01:09:49 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,15 @@ int		is_param_valid(char **argv);
 
 /* dlist_utils.c */
 t_dlist	*ft_dlstnew(int nbr, int index);
-void	ft_dlstadd_front(t_dlist **lst, t_dlist *new);
-void	ft_dlstadd_back(t_dlist **lst, t_dlist *new);
-t_dlist	*ft_dlstlast(t_dlist *lst);
-void	ft_dlstclear(t_dlist **lst);
-
-/* dlist_utils_2.c */
-void	ft_dlstdelone(t_dlist *lst);
+void	ft_dlstadd_front(t_dlist **lst, t_dlist *new, t_stack *stack);
+void	ft_dlstadd_back(t_dlist **lst, t_dlist *new, t_stack *stack);
+void	ft_dlstclear(t_dlist **lst, t_stack *stack);
+void	ft_dlstdelone(t_dlist *lst, t_stack *stack);
 
 /* stack_utils_swap.c */
 void	sa(t_dlist **lst, t_stack *stack);
 void	sb(t_dlist **lst, t_stack *stack);
+void	ss(t_dlist **a, t_dlist **b, t_stack *a_stack, t_stack *b_stack);
 void	swap(t_dlist **lst, t_stack *stack);
 
 /* stack_utils_push.c */
@@ -70,10 +68,12 @@ void	rrr(t_dlist **a, t_dlist **b, t_stack *a_stack, t_stack *b_stack);
 void	rev_rotate(t_dlist **lst, t_stack *stack);
 
 /* stack_initialization.c */
-void	initialize_stack(t_dlist **a, t_stack *a_stack, int argc, char **argv);
+void	initialize_stack(t_dlist **a, t_stack *a_stack, char **argv);
 
 /* sort_stack.c */
-int		is_sorted(t_dlist *lst);
+void	print_stack(t_dlist *stack, int len, char ab);
+void	print_stack_data(t_stack stack, char ab);
+int		is_sorted(t_dlist *lst, int len);
 void	sort_stack(t_dlist **a, t_stack *a_stack, t_dlist **b, \
 t_stack *b_stack);
 
@@ -93,6 +93,6 @@ t_stack *b_stack);
 /* sort_big_utils.c */
 void	rotate_up_and_push(t_dlist **a, t_stack *a_stack, int target);
 void	rotate_down_and_push(t_dlist **a, t_stack *a_stack, int target);
-int		find_biggest(t_dlist *lst, int target);
+int		find_biggest(t_dlist *lst, int target, int len);
 
 #endif

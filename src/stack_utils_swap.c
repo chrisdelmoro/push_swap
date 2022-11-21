@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:23:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/09 19:45:25 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:57:25 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ void	sb(t_dlist **lst, t_stack *stack)
 	ft_printf("sb\n");
 }
 
-/* void	ss(t_dlist **lst, t_stack *stack)
+void	ss(t_dlist **a, t_dlist **b, t_stack *a_stack, t_stack *b_stack)
 {
-
-} */
+	sa(a, a_stack);
+	sb(b, b_stack);
+	ft_printf("ss\n");
+}
 
 void	swap(t_dlist **lst, t_stack *stack)
 {
@@ -35,9 +37,11 @@ void	swap(t_dlist **lst, t_stack *stack)
 
 	if (stack->len <= 1)
 		return ;
+	stack->tail->next = (*lst)->next;
+	(*lst)->next->next->prev = *lst;
 	tmp = *lst;
 	*lst = (*lst)->next;
-	(*lst)->prev = NULL;
+	(*lst)->prev = stack->tail;
 	tmp->next = (*lst)->next;
 	(*lst)->next = tmp;
 	tmp->prev = *lst;

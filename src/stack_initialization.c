@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 18:40:54 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/09 17:36:44 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/18 02:50:55 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,21 +81,21 @@ static void	feed_indexes(t_dlist **a, t_stack *a_stack, int *nbr_array)
 	}
 }
 
-void	initialize_stack(t_dlist **a, t_stack *a_stack, int argc, char **argv)
+void	initialize_stack(t_dlist **a, t_stack *a_stack, char **argv)
 {
 	size_t	i;
 	int		*nbr_array;
 
 	i = 2;
+	a_stack->len = 1;
+	a_stack->tail = *a;
 	*a = ft_dlstnew(ft_atoi(argv[1]), -1);
 	while (argv[i])
 	{
-		ft_dlstadd_back(a, ft_dlstnew(ft_atoi(argv[i]), -1));
+		ft_dlstadd_back(a, ft_dlstnew(ft_atoi(argv[i]), -1), a_stack);
 		i++;
 	}
-	a_stack->len = argc - 1;
 	a_stack->head = *a;
-	a_stack->tail = ft_dlstlast(*a);
 	nbr_array = pre_sort(a, a_stack);
 	feed_indexes(a, a_stack, nbr_array);
 	free(nbr_array);

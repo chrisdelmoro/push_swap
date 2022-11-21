@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:13:44 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/12 20:03:33 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/18 00:14:19 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sort_2(t_dlist **a, t_stack *a_stack)
 {
 	if ((*a)->nbr > (*a)->next->nbr)
-		sa(a, a_stack);
+		ra(a, a_stack);
 }
 
 void	sort_3(t_dlist **a, t_stack *a_stack)
