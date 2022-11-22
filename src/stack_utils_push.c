@@ -6,25 +6,14 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:23:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/18 00:14:49 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/22 19:45:59 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
-void	pa(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
-{
-	push(lst1, lst2, stack1, stack2);
-	ft_printf("pa\n");
-}
-
-void	pb(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
-{
-	push(lst1, lst2, stack1, stack2);
-	ft_printf("pb\n");
-}
-
-void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
+static void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, \
+t_stack *stack2)
 {
 	t_dlist	*tmp;
 
@@ -42,4 +31,16 @@ void	push(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
 	stack2->head = *lst2;
 	if (stack2->len == 0)
 		stack2->tail = NULL;
+}
+
+void	pa(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
+{
+	push(lst1, lst2, stack1, stack2);
+	ft_printf("pa\n");
+}
+
+void	pb(t_dlist **lst1, t_dlist **lst2, t_stack *stack1, t_stack *stack2)
+{
+	push(lst1, lst2, stack1, stack2);
+	ft_printf("pb\n");
 }

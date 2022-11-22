@@ -6,12 +6,11 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 19:58:03 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/11/09 19:06:29 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/11/22 19:43:15 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
-#include <stdio.h>
 
 static int	are_params_unique(char **argv)
 {
