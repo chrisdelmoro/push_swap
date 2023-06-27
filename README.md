@@ -3,7 +3,7 @@
 <!-- PROJECT SHIELDS -->
 <br/>
 <p align="center">
-    <img src="https://github.com/chrisdelmoro/push_swap/blob/main/resources/repo/push_swapm.png" alt="Logo" width="150" height="150">
+    <img src="https://github.com/chrisdelmoro/push_swap/blob/main/resources/repo/push_swape.png" alt="Logo" width="150" height="150">
 
   <p align="center">
     This project objective is to sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed the student has to manipulate various types of algorithms and choose the most appropriate solution (out of many) for an optimized data sorting.
